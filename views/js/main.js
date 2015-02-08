@@ -444,7 +444,6 @@ var resizePizzas = function(size) {
 
     var newsize = sizeSwitcher(size);
     var dx = (newsize - oldsize) * windowwidth;
-
     return dx;
   }
 var pizzaContainerElements = document.querySelectorAll(".randomPizzaContainer");
@@ -453,8 +452,8 @@ var pizzaContainerElements = document.querySelectorAll(".randomPizzaContainer");
 function changePizzaSizes(size) {
 
   var rpcLength = pizzaContainerElements.length;
-  var dx = determineDx(pizzaContainerElements, size);
-  var newwidth = pizzaContainerElements.offsetWidth + dx + 'px';
+  var dx = determineDx(pizzaContainerElements[0], size);
+  var newWidth = pizzaContainerElements[0].offsetWidth + dx + 'px';
   for (var i = 0; i < rpcLength; i++) {
       pizzaContainerElements[i].style.width = newWidth;
    }
@@ -469,10 +468,9 @@ function changePizzaSizes(size) {
 }
 
 window.performance.mark("mark_start_generating"); // collect timing data
-
+var pizzasDiv = document.getElementById("randomPizzas");
 // This for-loop actually creates and appends all of the pizzas when the page loads
 for (var i = 2; i < 100; i++) {
-  var pizzasDiv = document.getElementById("randomPizzas");
   pizzasDiv.appendChild(pizzaElementGenerator(i));
 }
 
@@ -480,7 +478,7 @@ for (var i = 2; i < 100; i++) {
 window.performance.mark("mark_end_generating");
 window.performance.measure("measure_pizza_generation", "mark_start_generating", "mark_end_generating");
 var timeToGenerate = window.performance.getEntriesByName("measure_pizza_generation");
-console.log("Time to generate pizzas on load: " + timeToGenerate[0].duration + "ms");
+//console.log("Time to generate pizzas on load: " + timeToGenerate[0].duration + "ms");
 
 // Iterator for number of times the pizzas in the background have scrolled.
 // Used by updatePositions() to decide when to log the average time per frame
