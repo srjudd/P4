@@ -29,7 +29,7 @@
 	<li>Source files were provided at <a href="https://www.udacity.com/course/ud884" target="_blank">https://www.udacity.com/course/ud884</a>.</li>
 	<li>Udacity Course 884 Website Performance Optimization</li>
 	<li>Sublime Text v3 was used in editing index.html and views/js/main.js and this Read-Me page.</li>
-	<li>Adobe Fireworks CS6 was used to optimize images.</li>
+	<li>Adobe Fireworks CS6 and <a href="http://www.jpegmini.com" target="_blank">http://www.jpegmini.com</a> were used to optimize images.</li>
 	<li>Google Developers "Optimizing Performance" was used, along with PageSpeed Insights (below). 
 	<a href="https://developers.google.com/web/fundamentals/performance/" target="_blank">https://developers.google.com/web/fundamentals/performance/</a></li>
 	<li>Google Developers Pageesped Insights was used to analyze and optimize inde.html. <a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank">https://developers.google.com/speed/pagespeed/insights/</a></li>
@@ -38,6 +38,8 @@
 	<li>Chrome Developer Tools were used to analyze the framerate of pizza.html.</li>
 	<li>Udacity Coach Susan recommended the use of randomPizzaContainer.</li>
 	<li>jslint was used to check a section of code that did not wind up in the final project.</li>
+	<li>A minified version of the css in the head tag of pizza.html was produced by <a href="http://cssminifier.com" target="_blank">http://cssminifier.com</a>.</li>
+	<li>A minified version of main.js was produced by <a href="http://jscompress.com" target="_blank">http://jscompress.com</a>.</li>
 </ul>
 <h2>Honor Code Statement</h2>
 <p>I hereby confirm that all project submissions consist of my own work. Accordingly, I will document and cite the origins of any part(s) of my project submissions that were taken from websites, books, forums, blog posts, github repositories, or any other source and explain why I used them for any part of my submission. I understand that I may be asked to explain my work in a video call with a Udacity Coach before my Nanodegree is conferred.</p>
