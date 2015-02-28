@@ -24,7 +24,7 @@ concretized in declared variables of local or global scope, according to their u
 
 // As you may have realized, this website randomly generates pizzas.
 // Here are arrays of all possible pizza ingredients.
-var pnum = 49;
+var pnum = 49; //done to avoid calculating lenghts of arrays and also to cut down on pizzas
 var pizzaIngredients = {};
 pizzaIngredients.meats = [
   "Pepperoni",
@@ -452,9 +452,12 @@ var resizePizzas = function(size) {
     var dx = (newsize - oldsize) * windowwidth;
     return dx;
   }
+  //Get it here, use it in function changePizzaSizes.
+
 var pizzaContainerElements = document.querySelectorAll(".randomPizzaContainer");
   // Iterates through pizza elements on the page and changes their widths
-
+  //Removed everything except what actually needed to iterate
+  //from the loop, including seting the upper iteration limit outside the loop.
 function changePizzaSizes(size) {
 
   var rpcLength = pizzaContainerElements.length;
@@ -476,7 +479,7 @@ function changePizzaSizes(size) {
 window.performance.mark("mark_start_generating"); // collect timing data
 var pizzasDiv = document.getElementById("randomPizzas");
 // This for-loop actually creates and appends all of the pizzas when the page loads
-for (var i = 2; i < 100; i++) {
+for (var i = 2; i < pnum; i++) {
   pizzasDiv.appendChild(pizzaElementGenerator(i));
 }
 
@@ -509,7 +512,7 @@ function updatePositions() {
   window.performance.mark("mark_start_frame");
   var items = document.querySelectorAll('.mover');
   var itemsLength = items.length;
-  var scrolly = (document.body.scrollTop / 1250);
+  var scrolly = (document.body.scrollTop / 1250); //no longer looked up in loop
   for (var i = 0; i < itemsLength; i++) {
     var phase = Math.sin(scrolly + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
@@ -532,7 +535,7 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-
+//iteration limit changed from look-up to assigned value
   for (var i = 0; i < pnum; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
