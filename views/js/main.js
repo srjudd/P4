@@ -17,7 +17,7 @@ cameron *at* udacity *dot* com
 */
 /*To improve the frame rate of pizza.html, Changes were made to main.js in order 
 improve the frame rate in both scrolling of pizza.html and re-sizing pizzas with the 
-slider. The number of pizzas was knocked down to 100. Calculations and document query 
+slider. The number of random pizzas was knocked down to 49. Calculations and document query 
 look-ups that did not need to be repeated in loops were moved out of loops and/or 
 concretized in declared variables of local or global scope, according to their use.*/
 
