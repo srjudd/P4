@@ -1,4 +1,4 @@
-<h1>Website Performance Optimization portfolio project</h1>
+<h1>Website Performance Optimization portfolio project GH-Pages Branch</h1>
 <p>This project from the Udacity Website Performance Optmization course. Link: <a href="https://www.udacity.com/course/ud884" target="_blank">https://www.udacity.com/course/ud884</a> and submitted to the Udacity Frontend Nanodegree program, cohort 1, for Project 4.</p>
 <p>All files for the project wrere downloaded from Link: <a href="http://cameronwp.github.io/udportfolio/" target="_blank">http://cameronwp.github.io/udportfolio/.</a></p>
 <h2>How to Play</h2>
@@ -12,10 +12,11 @@
 <ul>
 	<li>From the index page above, click "Cam's Pizzeria", or go directly to <a href="http://srjudd.github.io/P4/views/pizza.html" target="_blank">http://srjudd.github.io/P4/views/pizza.html</a>.</li>
 	<li>Scroll the page to read the amusing random pizzas that have been generated. Watch little pizzas move as you scroll.</li>
-	<li>A bit below the page fold, find the size slider. Use it to choose the size of your pizza, and watch the non-moving pizzas change thier size acordingly.</li>
+	<li>A bit below the page fold, find the size slider. Use it to choose the size of your pizza, and watch the non-moving pizzas change their size acordingly.</li>
 	<li>Use the js console and/or Chrome Dev tools while doing these things to see how frame rate is affected.</li>
 </ul>
 <h2>Project Approach</h2>
+<p><em>Note: views/pizza.html and views/js/main.js include minified code. To review unminified versions of these pages, please see my dev branch. Please ignore the master branch.</em></p>
 <p>The following strategies were used with index.html to optimize page loading.</p>
 <ul>
 	<li>Replacing the small pizzeria image with a thumbnail and optimizing profile pic, and using them both as gifs.</li>
@@ -23,7 +24,13 @@
 	<li>Javascript in the head was made asynchronous except for a Google Analytics script that Google recommended not to make async.</li>
 	<li>A script at the end of the html page was used to load the Google font stylesheet.</li>
 </ul>
-<p>To improve the frame rate of pizza.html, Changes were made to main.js in order improve the frame rate in both scrolling of pizza.html and re-sizing pizzas with the slider. The number of pizzas was knocked down to 100. Calculations and document query look-ups that did not need to be repeated in loops were moved out of loops and/or concretized in declared variables of local or global scope, according to their use.</p>
+<p>To improve the frame rate of views/pizza.html, Changes were made to main.js in order improve the frame rate in both scrolling of views/pizza.html and re-sizing pizzas with the slider. In addition, following intial review, the content efficiency of the pizza page was improved. Here is a summary of improvements affecting views.pizza.html.
+<ul>
+	<li>The number of pizzas was knocked down to 49.</li>
+	<li>Calculations and document query look-ups that did not need to be repeated in loops were moved out of loops and/or concretized in declared variables of local or global scope, according to their use.</li>
+	<li>To improve the content efficiency of the views/pizza.html, css styles from both views/css/style.css and views/css/bootstrap-grid.css that were actually used in pizza.html were either inlined or applied in the html head. There are no longer links to external style sheets.</li>
+	<li>The code in views/js/main.js was minified. (See references.)</li>
+	<li>The styles in the head of views/pizza.html were minified. (See references)</li>
 <h2>Resources</h2>
 <ul>
 	<li>Source files were provided at <a href="https://www.udacity.com/course/ud884" target="_blank">https://www.udacity.com/course/ud884</a>.</li>
